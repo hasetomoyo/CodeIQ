@@ -1,2 +1,2 @@
 # CodeIQ
-CodeIQ解答用のリポジトリ
+CodeIQ解答コード格納
