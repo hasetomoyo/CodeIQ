@@ -1,24 +1,32 @@
-import sys
 import itertools
+import sys
+
+number_of_victories = 0
 
 try:
     while True:
+        # check_total_point_of_opponent = input()
+        # if check_total_point_of_opponent == '':
+        #     sys.exit()
+
         # 対戦相手の合計点
+        # total_point_of_opponent = int(check_total_point_of_opponent)
         total_point_of_opponent = int(input())
 
         # 手元のカードの点数
+        # card_pattern = []
+        # while True:
+        #     n = input()
+        #     if n == '':
+        #         break
+        #     card_pattern.append(n)
         card_pattern = []
-        while True:
-            n = input()
-            if n == '':
-                break
-            card_pattern.append(n)
+        for line in sys.stdin:
+            card_pattern.append(int(line))
 
         # print('相手のカード合計:', total_point_of_opponent)
         # print('手もとのカード:', card_pattern)
         # print('手元のカード数:', len(card_pattern), '枚')
-
-        number_of_victories = 0
 
         card_combination = []
         for i in range(1, len(card_pattern) + 1):
@@ -35,7 +43,7 @@ try:
                     if tmp_num > total_point_of_opponent:
                         # print('勝ち！')
                         number_of_victories = number_of_victories + 1
-                    else:
+                    # else:
                         # print('負け！')
 
             # 2つ以上の組み合わせ
